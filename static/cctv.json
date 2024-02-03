@@ -1,0 +1,289 @@
+  [
+  {
+    "id": "15",
+    "nama": "Batas Kota Arah Bandung",
+    "jenis": "PTZ",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/bataskotaarahbandung.m3u8",
+    "jalan_status": "Nasional"
+  },
+  {
+    "id": "5",
+    "nama": "Simpang Wasita Kusuma Arah Bandung",
+    "jenis": "FIX",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/wasitakusumaarahbandung.m3u8",
+    "jalan_status": "Nasional"
+  },
+  {
+    "id": "6",
+    "nama": "Simpang Wasita Kusuma Arah Bojong Jengkol",
+    "jenis": "FIX",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/wasitakusumaarahbojongjengkol.m3u8",
+    "jalan_status": "Nasional"
+  },
+  {
+    "id": "7",
+    "nama": "Simpang Wasita Kusuma Arah Letnan Harun",
+    "jenis": "FIX",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/wasitakusumaarahletnanharun.m3u8",
+    "jalan_status": "Nasional"
+  },
+  {
+    "id": "16",
+    "nama": "Simpang Bojong Jengkol Arah Wasita Kusuma",
+    "jenis": "FIX",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/bojongjengkolarahwasita.m3u8",
+    "jalan_status": "Nasional"
+  },
+  {
+    "id": "17",
+    "nama": "Simpang Bojong Jengkol Arah Leuwidahu",
+    "jenis": "FIX",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/bojongjengkolarahleuwidahu.m3u8",
+    "jalan_status": "Nasional"
+  },
+  {
+    "id": "18",
+    "nama": "Simpang Leuwidahu Arah Bojong Jengkol",
+    "jenis": "FIX",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/leuwidahuarahjati.m3u8",
+    "jalan_status": "Nasional"
+  },
+  {
+    "id": "19",
+    "nama": "Simpang Leuwidahu Arah Jati",
+    "jenis": "FIX",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/leuwidahuarahbojongjengkol.m3u8",
+    "jalan_status": "Nasional"
+  },
+  {
+    "id": "1",
+    "nama": "Simpang Jati",
+    "jenis": "PTZ",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/jati.m3u8",
+    "jalan_status": "Nasional"
+  },
+  {
+    "id": "4",
+    "nama": "Simpang Rancabango Arah Simpang Bantar",
+    "jenis": "PTZ",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/rancabangoptz.m3u8",
+    "jalan_status": "Kota"
+  },
+  {
+    "id": "34",
+    "nama": "Simpang Rancabango Arah Jati",
+    "jenis": "FIX",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/rancabangoarahjati.m3u8",
+    "jalan_status": "Kota"
+  },
+  {
+    "id": "35",
+    "nama": "Simpang Rancabango Arah Letnan Harun",
+    "jenis": "FIX",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/rancabangoarahletnanharun.m3u8",
+    "jalan_status": "Kota"
+  },
+  {
+    "id": "20",
+    "nama": "Simpang Bantar",
+    "jenis": "PTZ",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/bantar.m3u8",
+    "jalan_status": "Kota"
+  },
+  {
+    "id": "3",
+    "nama": "Simpang Mitra Batik",
+    "jenis": "PTZ",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/mitrabatik.m3u8",
+    "jalan_status": "Nasional"
+  },
+  {
+    "id": "8",
+    "nama": "Simpang Lima",
+    "jenis": "PTZ",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/simpanglima.m3u8",
+    "jalan_status": "Nasional"
+  },
+  {
+    "id": "25",
+    "nama": "Ruas M. Hatta",
+    "jenis": "FIX",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/mhatta.m3u8",
+    "jalan_status": "Nasional"
+  },
+  {
+    "id": "9",
+    "nama": "Simpang Cimulu",
+    "jenis": "PTZ",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/cimulu.m3u8",
+    "jalan_status": "Kota"
+  },
+  {
+    "id": "21",
+    "nama": "Simpang Dewi Sartika Arah Cimulu",
+    "jenis": "FIX",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/dewisartikaarahcimulu.m3u8",
+    "jalan_status": "Kota"
+  },
+  {
+    "id": "22",
+    "nama": "Simpang Dewi Sartika Arah Masjid Agung",
+    "jenis": "FIX",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/dewisartikaarahmasjidagung.m3u8",
+    "jalan_status": "Kota"
+  },
+  {
+    "id": "10",
+    "nama": "Simpang Masjid Agung",
+    "jenis": "PTZ",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/masjidagungptz.m3u8",
+    "jalan_status": "Kota"
+  },
+  {
+    "id": "12",
+    "nama": "Simpang Masjid Agung Arah Gedung Dakwah",
+    "jenis": "FIX",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/masjidagungarahgedungdakwah.m3u8",
+    "jalan_status": "Kota"
+  },
+  {
+    "id": "13",
+    "nama": "Taman Kota (Batu Andesit) Arah HZ Mustofa",
+    "jenis": "FIX",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/tamankota.m3u8",
+    "jalan_status": "Kota"
+  },
+  {
+    "id": "23",
+    "nama": "Simpang Cihideung",
+    "jenis": "PTZ",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/cihideung.m3u8",
+    "jalan_status": "Kota"
+  },
+  {
+    "id": "24",
+    "nama": "Simpang Nagarawangi",
+    "jenis": "PTZ",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/nagarawangi.m3u8",
+    "jalan_status": "Kota"
+  },
+  {
+    "id": "11",
+    "nama": "Taman Alun Alun",
+    "jenis": "PTZ",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/alunalunptz.m3u8",
+    "jalan_status": "Kota"
+  },
+  {
+    "id": "26",
+    "nama": "Simpang Alun-alun Arah Otista",
+    "jenis": "FIX",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/alunalunarahotista.m3u8",
+    "jalan_status": "Kota"
+  },
+  {
+    "id": "27",
+    "nama": "Simpang Alun-alun Arah Tentara Pelajar",
+    "jenis": "FIX",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/alunalunarahtentarapelajar.m3u8",
+    "jalan_status": "Kota"
+  },
+  {
+    "id": "28",
+    "nama": "Simpang Alun-alun Arah Sutisna Senjaya",
+    "jenis": "FIX",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/alunalunarahsutsen.m3u8",
+    "jalan_status": "Kota"
+  },
+  {
+    "id": "14",
+    "nama": "Simpang Sutisna Senjaya",
+    "jenis": "PTZ",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/sutisnasenjaya.m3u8",
+    "jalan_status": "Kota"
+  },
+  {
+    "id": "29",
+    "nama": "Simpang Cibogor Arah Sutisna Senjaya",
+    "jenis": "FIX",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/cibogorarahsutsen.m3u8",
+    "jalan_status": "Nasional"
+  },
+  {
+    "id": "30",
+    "nama": "Simpang Cibogor Arah M. Hatta",
+    "jenis": "FIX",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/cibogorarahmhatta.m3u8",
+    "jalan_status": "Nasional"
+  },
+  {
+    "id": "31",
+    "nama": "Simpang Cibogor Arah Ciamis",
+    "jenis": "FIX",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/cibogorarahciamis.m3u8",
+    "jalan_status": "Nasional"
+  },
+  {
+    "id": "32",
+    "nama": "Karang Resik",
+    "jenis": "PTZ",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/bataskotaciamis.m3u8",
+    "jalan_status": "Nasional"
+  },
+  {
+    "id": "33",
+    "nama": "Simpang Gunung Sabeulah",
+    "jenis": "PTZ",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/gunungsabeulah.m3u8",
+    "jalan_status": "Kota"
+  },
+  {
+    "id": "39",
+    "nama": "Simpang Pataruman PTZ",
+    "jenis": "PTZ",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/patarumanptz.m3u8",
+    "jalan_status": "Kota"
+  },
+  {
+    "id": "40",
+    "nama": "Simpang Pataruman FIX",
+    "jenis": "FIX",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/patarumanarahnagarawangi.m3u8",
+    "jalan_status": "Kota"
+  },
+  {
+    "id": "41",
+    "nama": "Simpang Panyerutan PTZ",
+    "jenis": "PTZ",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/panyerutanptz.m3u8",
+    "jalan_status": "Kota"
+  },
+  {
+    "id": "42",
+    "nama": "Simpang Panyerutan FIX",
+    "jenis": "FIX",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/panyerutanarahnagarawangi.m3u8",
+    "jalan_status": "Kota"
+  },
+  {
+    "id": "43",
+    "nama": "Simpang Paseh",
+    "jenis": "PTZ",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/pasehptz.m3u8",
+    "jalan_status": "Kota"
+  },
+  {
+    "id": "44",
+    "nama": "Simpang Padayungan",
+    "jenis": "FIX",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/padayunganarahkawalu.m3u8",
+    "jalan_status": "Kota"
+  },
+  {
+    "id": "45",
+    "nama": "Simpang Rumah Sakit",
+    "jenis": "PTZ",
+    "link": "https://atcs.tasikmalayakota.go.id/camera/rumahsakit.m3u8",
+    "jalan_status": "Kota"
+  }
+]

@@ -1,5 +1,6 @@
-from flask import Flask, render_template, Response
+from flask import Flask, render_template, Response, jsonify
 import cv2
+import json
 import numpy as np
 from time import sleep
 
@@ -76,6 +77,12 @@ def index():
 @app.route('/video_feed')
 def video_feed():
     return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
+
+@app.route('/cctv/')
+def cctv():
+    with open('static/cctv.json') as c:
+        names = json.load(c)
+    return jsonify(names)
 
 if __name__ == "__main__":
     app.run(debug=True)
