@@ -1,5 +1,10 @@
 {
   "version": 2,
+  "functions": {
+    "api/main.py": {
+      "runtime": "python3.8"
+    }
+  },
   "builds": [
     {
       "src": "./main.py",
