@@ -56,8 +56,12 @@ def detect_objects(frame):
     cv2.putText(frame, "Kendaraan Lewat: " + str(car), (250, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
     return expand, frame
 
+def reset_vehicle_count():
+    global car
+    car = 0
+
 def generate_frames(url):
-    global linkCctv
+    reset_vehicle_count()
     cap = cv2.VideoCapture(url)
     
     while True:
@@ -79,7 +83,20 @@ def index():
 @app.route('/video_feed/', methods=['GET'])
 def video_feed():
     url = request.args.get('link')
+
+    if not url:
+        return "Error: Video link not provided.", 400
+    
     return Response(generate_frames(url), mimetype='multipart/x-mixed-replace; boundary=frame')
+
+@app.route('/stop_counting/', methods=['POST'])
+def stop_counting():
+    
+    global car
+    car = 0
+
+    print("Counting stopped on the server side")
+    return "Counting stopped", 200
 
 @app.route('/cctv/')
 def cctv():
