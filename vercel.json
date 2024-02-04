@@ -1,10 +1,15 @@
 {
+  "version": 2,
   "builds": [
     {
-      "src": "frontend/**",
-      "use": "@now/static-build",
-      "config": { "distDir": "frontend" }
+      "src": "./main.py",
+      "use": "@vercel/python"
     }
   ],
-  "routes": [{ "src": "/(.*)", "dest": "/frontend/$1" }]
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "main.py"
+    }
+  ]
 }
