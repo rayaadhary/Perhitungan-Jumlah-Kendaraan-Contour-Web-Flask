@@ -1,0 +1,10 @@
+{
+  "builds": [
+    {
+      "src": "frontend/**",
+      "use": "@now/static-build",
+      "config": { "distDir": "frontend" }
+    }
+  ],
+  "routes": [{ "src": "/(.*)", "dest": "/frontend/$1" }]
+}
