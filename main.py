@@ -1,4 +1,4 @@
-from flask import Flask, render_template, Response, jsonify
+from flask import Flask, render_template, Response, jsonify, request
 import cv2
 import json
 import numpy as np
@@ -20,8 +20,6 @@ def pega_centro(x, y, w, h):
     cx = x + x1
     cy = y + y1
     return cx, cy
-
-cap = cv2.VideoCapture('https://stream.klaten.go.id:8080/cctv/hls/simpang4bareng_arahsolo.m3u8')
 subtraction = cv2.createBackgroundSubtractorMOG2()
 
 def detect_objects(frame):
@@ -58,7 +56,10 @@ def detect_objects(frame):
     cv2.putText(frame, "Kendaraan Lewat: " + str(car), (250, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
     return expand, frame
 
-def generate_frames():
+def generate_frames(url):
+    global linkCctv
+    cap = cv2.VideoCapture(url)
+    
     while True:
         ret, frame = cap.read()
         time = float(1/delay)
@@ -70,13 +71,15 @@ def generate_frames():
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + frame_bytes + b'\r\n\r\n')
 
+
 @app.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/video_feed')
+@app.route('/video_feed/', methods=['GET'])
 def video_feed():
-    return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
+    url = request.args.get('link')
+    return Response(generate_frames(url), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 @app.route('/cctv/')
 def cctv():
