@@ -1,30 +1,9 @@
-  [
+[
   {
     "id": "15",
     "nama": "Batas Kota Arah Bandung",
     "jenis": "PTZ",
     "link": "https://atcs.tasikmalayakota.go.id/camera/bataskotaarahbandung.m3u8",
-    "jalan_status": "Nasional"
-  },
-  {
-    "id": "5",
-    "nama": "Simpang Wasita Kusuma Arah Bandung",
-    "jenis": "FIX",
-    "link": "https://atcs.tasikmalayakota.go.id/camera/wasitakusumaarahbandung.m3u8",
-    "jalan_status": "Nasional"
-  },
-  {
-    "id": "6",
-    "nama": "Simpang Wasita Kusuma Arah Bojong Jengkol",
-    "jenis": "FIX",
-    "link": "https://atcs.tasikmalayakota.go.id/camera/wasitakusumaarahbojongjengkol.m3u8",
-    "jalan_status": "Nasional"
-  },
-  {
-    "id": "7",
-    "nama": "Simpang Wasita Kusuma Arah Letnan Harun",
-    "jenis": "FIX",
-    "link": "https://atcs.tasikmalayakota.go.id/camera/wasitakusumaarahletnanharun.m3u8",
     "jalan_status": "Nasional"
   },
   {
@@ -39,20 +18,6 @@
     "nama": "Simpang Bojong Jengkol Arah Leuwidahu",
     "jenis": "FIX",
     "link": "https://atcs.tasikmalayakota.go.id/camera/bojongjengkolarahleuwidahu.m3u8",
-    "jalan_status": "Nasional"
-  },
-  {
-    "id": "18",
-    "nama": "Simpang Leuwidahu Arah Bojong Jengkol",
-    "jenis": "FIX",
-    "link": "https://atcs.tasikmalayakota.go.id/camera/leuwidahuarahjati.m3u8",
-    "jalan_status": "Nasional"
-  },
-  {
-    "id": "19",
-    "nama": "Simpang Leuwidahu Arah Jati",
-    "jenis": "FIX",
-    "link": "https://atcs.tasikmalayakota.go.id/camera/leuwidahuarahbojongjengkol.m3u8",
     "jalan_status": "Nasional"
   },
   {
@@ -81,13 +46,6 @@
     "nama": "Simpang Rancabango Arah Letnan Harun",
     "jenis": "FIX",
     "link": "https://atcs.tasikmalayakota.go.id/camera/rancabangoarahletnanharun.m3u8",
-    "jalan_status": "Kota"
-  },
-  {
-    "id": "20",
-    "nama": "Simpang Bantar",
-    "jenis": "PTZ",
-    "link": "https://atcs.tasikmalayakota.go.id/camera/bantar.m3u8",
     "jalan_status": "Kota"
   },
   {
@@ -137,20 +95,6 @@
     "nama": "Simpang Masjid Agung",
     "jenis": "PTZ",
     "link": "https://atcs.tasikmalayakota.go.id/camera/masjidagungptz.m3u8",
-    "jalan_status": "Kota"
-  },
-  {
-    "id": "12",
-    "nama": "Simpang Masjid Agung Arah Gedung Dakwah",
-    "jenis": "FIX",
-    "link": "https://atcs.tasikmalayakota.go.id/camera/masjidagungarahgedungdakwah.m3u8",
-    "jalan_status": "Kota"
-  },
-  {
-    "id": "13",
-    "nama": "Taman Kota (Batu Andesit) Arah HZ Mustofa",
-    "jenis": "FIX",
-    "link": "https://atcs.tasikmalayakota.go.id/camera/tamankota.m3u8",
     "jalan_status": "Kota"
   },
   {
@@ -207,27 +151,6 @@
     "nama": "Simpang Cibogor Arah Sutisna Senjaya",
     "jenis": "FIX",
     "link": "https://atcs.tasikmalayakota.go.id/camera/cibogorarahsutsen.m3u8",
-    "jalan_status": "Nasional"
-  },
-  {
-    "id": "30",
-    "nama": "Simpang Cibogor Arah M. Hatta",
-    "jenis": "FIX",
-    "link": "https://atcs.tasikmalayakota.go.id/camera/cibogorarahmhatta.m3u8",
-    "jalan_status": "Nasional"
-  },
-  {
-    "id": "31",
-    "nama": "Simpang Cibogor Arah Ciamis",
-    "jenis": "FIX",
-    "link": "https://atcs.tasikmalayakota.go.id/camera/cibogorarahciamis.m3u8",
-    "jalan_status": "Nasional"
-  },
-  {
-    "id": "32",
-    "nama": "Karang Resik",
-    "jenis": "PTZ",
-    "link": "https://atcs.tasikmalayakota.go.id/camera/bataskotaciamis.m3u8",
     "jalan_status": "Nasional"
   },
   {

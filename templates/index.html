@@ -4,23 +4,36 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Unofficial ATCS Kota Tasikmalaya</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,600;6..12,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,600;6..12,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Public+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@900&display=swap"
+      rel="stylesheet"
+    />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <head>
-      <!-- Pustaka Video.js -->
-      <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet" />
-      <script src="https://vjs.zencdn.net/7.14.3/video.js"></script>
-    </head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Pustaka Video.js -->
+    <!-- <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet" /> -->
+    <!-- <script src="https://vjs.zencdn.net/7.14.3/video.js"></script> -->
 
     <!-- CSS -->
     <style>
       body {
-        font-family: 'Nunito Sans', sans-serif;
+        font-family: "Nunito Sans", sans-serif;
       }
 
       h1,
@@ -142,7 +155,15 @@
     <nav class="navbar navbar-expand-lg bg-white py-3" data-bs-theme="light">
       <div class="container">
         <a class="navbar-brand" href="#">ATCS</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -162,13 +183,22 @@
     </nav>
 
     <section id="beranda">
-      <img src="{{ url_for('static', filename='img/hero_sec.jpg') }}" alt="picture" width="500" height="auto" />
+      <img
+        src="{{ url_for('static', filename='img/hero_sec.jpg') }}"
+        alt="picture"
+        width="500"
+        height="auto"
+      />
       <div class="overlay"></div>
       <div class="overlay-text">
         <h1 data-aos="fade-right">ATCS Kota Tasikmalaya</h1>
-        <h4 data-aos="fade-right">Selamat Datang di Unofficial Website ATCS Dishub Kota Tasikmalaya</h4>
+        <h4 data-aos="fade-right">
+          Selamat Datang di Unofficial Website ATCS Dishub Kota Tasikmalaya
+        </h4>
         <a href="#live" style="text-decoration: none; color: #000">
-          <h5 data-aos="fade-right"><i class="fa-regular fa-circle-play fa-fade mt-3 text-danger"></i> Live Streaming CCTV</h5>
+          <h5 data-aos="fade-right">
+            <i class="fa-regular fa-circle-play fa-fade mt-3 text-danger"></i> Live Streaming CCTV
+          </h5>
         </a>
       </div>
     </section>
@@ -183,29 +213,65 @@
         <div class="card shadow">
           <div class="row g-0">
             <div class="col-md-6">
-              <img src="{{ url_for('static', filename='img/about.jpg') }}" class="img-fluid rounded-start" alt="picture" />
+              <img
+                src="{{ url_for('static', filename='img/about.png') }}"
+                class="img-fluid rounded-start"
+                alt="picture"
+              />
             </div>
             <div class="col-md-6">
               <div class="card-body">
                 <div class="accordion" id="accordionExample">
                   <div class="accordion-item">
                     <h2 class="accordion-header">
-                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Area Traffic Control System</button>
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        Area Traffic Control System
+                      </button>
                     </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse show"
+                      data-bs-parent="#accordionExample"
+                    >
                       <div class="accordion-body">
-                        <strong>Area Traffic Control System</strong> atau yang lebih dikenal dengan istilah <strong>ATCS</strong> adalah suatu sistem pengendalian lalu lintas berbasis teknologi informasi pada suatu kawasan yang bertujuan untuk mengoptimalkan kinerja jaringan jalan melalui optimasi dan koordinasi
+                        <strong>Area Traffic Control System</strong> atau yang lebih dikenal dengan
+                        istilah <strong>ATCS</strong> adalah suatu sistem pengendalian lalu lintas
+                        berbasis teknologi informasi pada suatu kawasan yang bertujuan untuk
+                        mengoptimalkan kinerja jaringan jalan melalui optimasi dan koordinasi
                         pengaturan lampu lalu lintas di setiap persimpangan.
                       </div>
                     </div>
                   </div>
                   <div class="accordion-item">
                     <h2 class="accordion-header">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Penjelasan Singkat Program</button>
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        Penjelasan Singkat Program
+                      </button>
                     </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
                       <div class="accordion-body">
-                        Program ini dibangun dengan Framework <strong>Flask</strong> ditulis dalam bahasa pemrograman <strong>Python</strong> menggunakan algoritma <strong>Contour</strong>, bertujuan untuk memantau jumlah kendaraan yang melintas melalui cctv pada
+                        Program ini dibangun dengan Framework <strong>Flask</strong> ditulis dalam
+                        bahasa pemrograman <strong>Python</strong> menggunakan algoritma
+                        <strong>Contour</strong>, bertujuan untuk memantau jumlah kendaraan yang
+                        melintas melalui cctv pada
                         <strong>Kota Tasikmalaya.</strong>
                       </div>
                     </div>
@@ -239,50 +305,59 @@
       </div>
     </section>
 
-    <!-- <main role="main" class="container" style="padding-top: 100px; padding-bottom: 100px">
-      <div class="container">
-        <img src="{{ url_for('video_feed') }}" />
-      </div>
-
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8">
-            <div class="scrollable">
-              <table class="table table-bordered" id="dataCctv">
-                <tbody id="dataBody"></tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main> -->
-
     <!-- Scroll to Top Button-->
     <button id="backToTopBtn" onclick="scrollToTop()" class="btn-rounded">
       <i class="fa-solid fa-arrow-up"></i>
     </button>
-    <!-- <button id="backToTopBtn" class="btn btn-rounded">&#8593;</button> -->
 
     <footer class="mt-5">
-      <div class="container" style="display: flex; justify-content: space-between; align-items: center">
+      <div
+        class="container"
+        style="display: flex; justify-content: space-between; align-items: center"
+      >
         <p style="margin: 0">&copy; <span id="tahun"></span> Unofficial ATCS Kota Tasikmalaya</p>
-        <a href="https://github.com/rayaadhary/Perhitungan-Jumlah-Kendaraan-Contour-Web-Flask" target="_blank" style="text-decoration: none; color: inherit"> <i class="fab fa-github"></i> GitHub </a>
+        <a
+          href="https://github.com/rayaadhary/Perhitungan-Jumlah-Kendaraan-Contour-Web-Flask"
+          target="_blank"
+          style="text-decoration: none; color: inherit"
+        >
+          <i class="fab fa-github"></i> GitHub
+        </a>
       </div>
     </footer>
 
-    <!-- Menggunakan fetch untuk mengambil data dari file JSON -->
+    <!--*** SOURCE JS ***-->
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Inisialisasi AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!--*** END SOURCE JS ***-->
+
+    <!--*** JS PROGRAM ***-->
+
     <!-- Menggunakan fetch untuk mengambil data dari file JSON -->
     <script>
-      fetch('cctv')
+      var modalBody = document.getElementById("modalBody");
+      fetch("cctv")
         .then((response) => response.json())
         .then((data) => {
           // Menyusun data ke dalam tabel HTML
-          const dataBody = document.getElementById('dataCctv');
-          const modalTitle = document.getElementById('modalTitle');
-          const videoFrame = document.getElementById('videoFrame');
+          const dataBody = document.getElementById("dataCctv");
+          const modalTitle = document.getElementById("modalTitle");
+          const videoFrame = document.getElementById("videoFrame");
 
           data.forEach((item) => {
-            const row = document.createElement('tr');
+            const row = document.createElement("tr");
             row.innerHTML = `
           <td class="alert alert-white" role="alert">
             <a href="#" style="text-decoration: none;" 
@@ -292,6 +367,7 @@
                 <i class="fa-regular fa-circle-play text-info"></i> ${item.nama}
             </a>
           </td>`;
+
             dataBody.appendChild(row);
           });
 
@@ -301,16 +377,31 @@
             videoFrame.src = `{{ url_for('video_feed') }}?link=${link}`;
           };
         })
-        .catch((error) => console.error('Error:', error));
+        .catch((error) => {
+          console.error("Error:", error);
+          modalBody.innerHTML = "<p>Error fetching data: " + error + "</p>";
+        });
     </script>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="modalTitle"></h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="stopCounting()"></button>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              onclick="stopCounting()"
+            ></button>
           </div>
           <div class="modal-body">
             <div class="container-fluid">
@@ -326,12 +417,17 @@
                   >
                     <source src="{{ url_for('video_feed') }}" type="application/x-mpegURL" />
                   </video> -->
-                  <img id="videoFrame" class="img-fluid" src="{{ url_for('video_feed') }}" />
+                  <img
+                    id="videoFrame"
+                    class="img-fluid"
+                    src="{{ url_for('video_feed') }}"
+                    alt="video"
+                  />
+                  <div class="modal-body" id="modalBody"></div>
                 </div>
                 <div class="col-md-12 ms-auto justify-content-center d-flex">
                   <div class="d-flex flex-row mt-3">
-                    <div class="p-2">kendaraan lewat: 1000</div>
-                    <div class="p-2">akurasi: 100%</div>
+                    <div class="p-2" id="vehicleCount">Kendaraan lewat: 0</div>
                   </div>
                 </div>
               </div>
@@ -341,67 +437,87 @@
       </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <!-- Inisialisasi AOS -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init();
+      function updateVehicleCount() {
+        // Menggunakan XMLHttpRequest atau menggunakan Fetch API
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+            var vehicleCountElement = document.getElementById("vehicleCount");
+            if (vehicleCountElement) {
+              vehicleCountElement.innerHTML = "Kendaraan lewat: " + response.vehicle_count;
+            }
+          }
+        };
+        xhr.open("GET", "/kendaraan", true);
+        xhr.send();
+      }
+
+      // Memperbarui setiap beberapa detik (misalnya, setiap 0.1 detik)
+      setInterval(updateVehicleCount, 100);
     </script>
+
+    <!--*** END JS PROGRAM ***-->
+
+    <!--*** JS INTERAKTIF ***-->
 
     <script>
       // Mendapatkan tahun terkini
       var tahunTerkini = new Date().getFullYear();
       // Menampilkan tahun terkini di elemen dengan id "tahun"
-      document.getElementById('tahun').innerText = tahunTerkini;
+      document.getElementById("tahun").innerText = tahunTerkini;
     </script>
 
     <!-- Mengatur nav-item Active -->
     <script>
       function stopCounting() {
         // Send a request to the server to stop counting
-        fetch('/stop_counting/', { method: 'POST' })
+        fetch("/stop_counting/", { method: "POST" })
           .then((response) => response.text())
           .then((data) => {
             console.log(data);
             // Reset the car count to zero
-            car = 0;
-            console.log('Car count reset to zero');
+            vehicle = 0;
+            console.log("Vehicle count reset to zero");
           })
-          .catch((error) => console.error('Error:', error));
+          .catch((error) => console.error("Error:", error));
       }
 
       // Fungsi untuk menangani klik pada tautan navbar
-      document.addEventListener('DOMContentLoaded', function () {
-        const navbarLinks = document.querySelectorAll('.navbar-nav .nav-link');
+      document.addEventListener("DOMContentLoaded", function () {
+        const navbarLinks = document.querySelectorAll(".navbar-nav .nav-link");
 
         navbarLinks.forEach(function (link) {
-          link.addEventListener('click', function () {
+          link.addEventListener("click", function () {
             navbarLinks.forEach(function (navLink) {
-              navLink.classList.remove('active');
+              navLink.classList.remove("active");
             });
 
-            this.classList.add('active');
+            this.classList.add("active");
           });
         });
       });
 
       // Scrollspy untuk menandai bagian yang terlihat saat di-scroll
-      document.addEventListener('scroll', function () {
+      document.addEventListener("scroll", function () {
         const scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
-        const sections = document.querySelectorAll('section');
+        const sections = document.querySelectorAll("section");
         sections.forEach(function (section) {
           const sectionTop = section.offsetTop - 50; // Sesuaikan offset sesuai kebutuhan
           const sectionBottom = sectionTop + section.offsetHeight;
 
           if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
             navbarLinks.forEach(function (navLink) {
-              navLink.classList.remove('active');
+              navLink.classList.remove("active");
             });
 
-            const targetLink = document.querySelector(`.navbar-nav .nav-link[href="#${section.id}"]`);
+            const targetLink = document.querySelector(
+              `.navbar-nav .nav-link[href="#${section.id}"]`
+            );
             if (targetLink) {
-              targetLink.classList.add('active');
+              targetLink.classList.add("active");
             }
           }
         });
@@ -409,14 +525,14 @@
     </script>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        var button = document.getElementById('backToTopBtn');
+      document.addEventListener("DOMContentLoaded", function () {
+        var button = document.getElementById("backToTopBtn");
 
-        window.addEventListener('scroll', function () {
+        window.addEventListener("scroll", function () {
           if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            button.style.display = 'block';
+            button.style.display = "block";
           } else {
-            button.style.display = 'none';
+            button.style.display = "none";
           }
         });
       });
@@ -426,5 +542,7 @@
         document.documentElement.scrollTop = 0;
       }
     </script>
+
+    <!--*** END JS INTERAKTIF ***-->
   </body>
 </html>

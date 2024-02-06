@@ -12,7 +12,7 @@ offset = 10
 pos_line = 275
 delay = 600
 detec = []
-car = 0
+vehicle = 0
 
 def pega_centro(x, y, w, h):
     x1 = int(w / 2)
@@ -20,6 +20,7 @@ def pega_centro(x, y, w, h):
     cx = x + x1
     cy = y + y1
     return cx, cy
+
 subtraction = cv2.createBackgroundSubtractorMOG2()
 
 def detect_objects(frame):
@@ -47,18 +48,18 @@ def detect_objects(frame):
 
         for (x, y) in detec:
             if y < (pos_line+offset) and y > (pos_line-offset):
-                global car
-                car += 1
+                global vehicle
+                vehicle += 1
                 cv2.line(frame, (25, pos_line), (650,pos_line), (0, 127, 255), 3)
                 detec.remove((x, y))
-                print("car is detected: " + str(car))
+                print("Vehicle is detected: " + str(vehicle))
 
-    cv2.putText(frame, "Kendaraan Lewat: " + str(car), (250, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
+    # cv2.putText(frame, "Kendaraan Lewat: " + str(vehicle), (250, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
     return expand, frame
 
-def reset_vehicle_count():
-    global car
-    car = 0
+def reset_vehicle_count():  
+    global vehicle
+    vehicle = 0
 
 def generate_frames(url):
     reset_vehicle_count()
@@ -74,7 +75,6 @@ def generate_frames(url):
         frame_bytes = jpeg.tobytes()
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + frame_bytes + b'\r\n\r\n')
-
 
 @app.route('/')
 def index():
@@ -92,8 +92,8 @@ def video_feed():
 @app.route('/stop_counting/', methods=['POST'])
 def stop_counting():
     
-    global car
-    car = 0
+    global vehicle
+    vehicle = 0
 
     print("Counting stopped on the server side")
     return "Counting stopped", 200
@@ -103,6 +103,11 @@ def cctv():
     with open('static/cctv.json') as c:
         names = json.load(c)
     return jsonify(names)
+
+@app.route('/kendaraan')
+def kendaraan():
+    global vehicle
+    return jsonify({'vehicle_count': vehicle})
 
 if __name__ == "__main__":
     # app.run(debug=True)
