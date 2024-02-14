@@ -26,10 +26,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
 
-    <!-- Pustaka Video.js -->
-    <!-- <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet" /> -->
-    <!-- <script src="https://vjs.zencdn.net/7.14.3/video.js"></script> -->
-
     <!-- CSS -->
     <style>
       body {
@@ -400,34 +396,30 @@
               class="btn-close"
               data-bs-dismiss="modal"
               aria-label="Close"
-              onclick="stopCounting()"
+              title="Keluar"
             ></button>
           </div>
           <div class="modal-body">
             <div class="container-fluid">
               <div class="row">
-                <div class="col-md-12 ms-auto justify-content-center d-flex">
-                  <!-- <video
-                    id="my-video"
-                    class="video-js"
-                    controls
-                    preload="auto"
-                    width="700"
-                    data-setup="{}"
-                  >
-                    <source src="{{ url_for('video_feed') }}" type="application/x-mpegURL" />
-                  </video> -->
+                <div class="col-md-12 ms-auto justify-content-center align-items-center d-flex">
                   <img
                     id="videoFrame"
-                    class="img-fluid"
+                    class="img-fluid mx-auto d-block"
+                    style="margin: auto"
                     src="{{ url_for('video_feed') }}"
                     alt="video"
                   />
                   <div class="modal-body" id="modalBody"></div>
                 </div>
                 <div class="col-md-12 ms-auto justify-content-center d-flex">
-                  <div class="d-flex flex-row mt-3">
+                  <div class="d-flex flex-row mt-3 align-items-center">
                     <div class="p-2" id="vehicleCount">Kendaraan lewat: 0</div>
+                    <div class="p-2">
+                      <button type="button" class="btn" onclick="stopCounting()" title="Reset">
+                        <i class="fa-solid fa-rotate fa-spin"></i>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -439,7 +431,6 @@
 
     <script>
       function updateVehicleCount() {
-        // Menggunakan XMLHttpRequest atau menggunakan Fetch API
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
           if (xhr.readyState === 4 && xhr.status === 200) {
@@ -458,18 +449,6 @@
       setInterval(updateVehicleCount, 100);
     </script>
 
-    <!--*** END JS PROGRAM ***-->
-
-    <!--*** JS INTERAKTIF ***-->
-
-    <script>
-      // Mendapatkan tahun terkini
-      var tahunTerkini = new Date().getFullYear();
-      // Menampilkan tahun terkini di elemen dengan id "tahun"
-      document.getElementById("tahun").innerText = tahunTerkini;
-    </script>
-
-    <!-- Mengatur nav-item Active -->
     <script>
       function stopCounting() {
         // Send a request to the server to stop counting
@@ -483,7 +462,39 @@
           })
           .catch((error) => console.error("Error:", error));
       }
+    </script>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Tambahkan event listener untuk event 'hidden.bs.modal'
+        var modal = document.getElementById("exampleModal");
+        modal.addEventListener("hidden.bs.modal", function () {
+          fetch("/stop_counting/", { method: "POST" })
+            .then((response) => response.text())
+            .then((data) => {
+              console.log(data);
+              // Reset the car count to zero
+              vehicle = 0;
+              console.log("Vehicle count reset to zero");
+            })
+            .catch((error) => console.error("Error:", error));
+        });
+      });
+    </script>
+
+    <!--*** END JS PROGRAM ***-->
+
+    <!--*** JS INTERAKTIF ***-->
+
+    <script>
+      // Mendapatkan tahun terkini
+      var tahunTerkini = new Date().getFullYear();
+      // Menampilkan tahun terkini di elemen dengan id "tahun"
+      document.getElementById("tahun").innerText = tahunTerkini;
+    </script>
+
+    <!-- Mengatur nav-item Active -->
+    <script>
       // Fungsi untuk menangani klik pada tautan navbar
       document.addEventListener("DOMContentLoaded", function () {
         const navbarLinks = document.querySelectorAll(".navbar-nav .nav-link");

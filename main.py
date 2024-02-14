@@ -6,70 +6,75 @@ from time import sleep
 
 app = Flask(__name__)
 
-width_min = 40
-height_min = 40
-offset = 10
-pos_line = 275
-delay = 600
-detec = []
+min_width = 40  # Ukuran minimum lebar kendaraan
+min_height = 40  # Ukuran minimum tinggi kendaraan
+offset = 6
+delay = 30
+detected = []
 vehicle = 0
 
-def pega_centro(x, y, w, h):
+def get_center(x, y, w, h):
     x1 = int(w / 2)
     y1 = int(h / 2)
     cx = x + x1
     cy = y + y1
     return cx, cy
 
-subtraction = cv2.createBackgroundSubtractorMOG2()
+subtraction = cv2.bgsegm.createBackgroundSubtractorMOG()
 
-def detect_objects(frame):
-    grey = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    blur = cv2.GaussianBlur(grey, (3, 3), 5)
-
+def detect_vehicle(frame):
+    frame_height = frame.shape[0]
+    
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    blur = cv2.GaussianBlur(gray, (3, 3), 5)
     img_sub = subtraction.apply(blur)
-    dilat = cv2.dilate(img_sub, np.ones((5, 5)))
+    dilate = cv2.dilate(img_sub, np.ones((5, 5)))
     kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5, 5))
-    expand = cv2.morphologyEx(dilat, cv2.MORPH_CLOSE, kernel)
-    expand = cv2.morphologyEx(expand, cv2.MORPH_CLOSE, kernel)
-    contour, h = cv2.findContours(expand, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    dilation = cv2.morphologyEx(dilate, cv2.MORPH_CLOSE, kernel)
+    dilation = cv2.morphologyEx(dilation, cv2.MORPH_CLOSE, kernel)
+    contours, hierarchy = cv2.findContours(dilation, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    
+    line_position = int(frame_height * 0.5)
 
-    for (i, c) in enumerate(contour):
+    cv2.line(frame, (0, line_position), (frame.shape[1], line_position), (255, 127, 0), 3)
+    for (i, c) in enumerate(contours):
         (x, y, w, h) = cv2.boundingRect(c)
-        validate_outline = (w >= width_min) and (h >= height_min)
-        if not validate_outline:
+        validate_contour = (w >= min_width) and (h >= min_height)
+        if not validate_contour:
             continue
 
-        cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
-
-        center = pega_centro(x, y, w, h)
-        detec.append(center)
+        # center = get_center(x, y, w, h)
+        # detected.append(center)
+        cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)        
+        center = get_center(x, y, w, h)
+        detected.append(center)
         cv2.circle(frame, center, 4, (0, 0, 255), -1)
 
-        for (x, y) in detec:
-            if y < (pos_line+offset) and y > (pos_line-offset):
+        for (x, y) in detected:
+            if y < (line_position + offset) and y > (line_position - offset):
                 global vehicle
                 vehicle += 1
-                cv2.line(frame, (25, pos_line), (650,pos_line), (0, 127, 255), 3)
-                detec.remove((x, y))
-                print("Vehicle is detected: " + str(vehicle))
+                cv2.line(frame, (0, line_position), (frame.shape[1], line_position), (0, 127, 255), 3)
+                detected.remove((x, y))
+                print("Vehicle is detected: " + str(vehicle))        
 
-    # cv2.putText(frame, "Kendaraan Lewat: " + str(vehicle), (250, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
-    return expand, frame
+    # cv2.putText(frame, "Kendaraan Lewat: " + str(vehicle), (10, 100), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 0, 255), 2)
+
+    return dilation, frame
 
 def reset_vehicle_count():  
     global vehicle
     vehicle = 0
 
 def generate_frames(url):
-    reset_vehicle_count()
     cap = cv2.VideoCapture(url)
+    reset_vehicle_count()
     
     while True:
         ret, frame = cap.read()
         time = float(1/delay)
         sleep(time)
-        detected_frame, original_frame = detect_objects(frame)
+        detected_frame, original_frame = detect_vehicle(frame)
 
         _, jpeg = cv2.imencode('.jpg', original_frame)
         frame_bytes = jpeg.tobytes()
@@ -91,10 +96,7 @@ def video_feed():
 
 @app.route('/stop_counting/', methods=['POST'])
 def stop_counting():
-    
-    global vehicle
-    vehicle = 0
-
+    reset_vehicle_count()
     print("Counting stopped on the server side")
     return "Counting stopped", 200
 
@@ -106,9 +108,7 @@ def cctv():
 
 @app.route('/kendaraan')
 def kendaraan():
-    global vehicle
     return jsonify({'vehicle_count': vehicle})
 
 if __name__ == "__main__":
-    # app.run(debug=True)
     app.run(debug=False)
